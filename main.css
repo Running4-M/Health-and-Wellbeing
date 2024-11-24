@@ -1,0 +1,237 @@
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+
+
+
+
+
+body {
+    
+    line-height: 1.6;
+    transition: opacity 0.5s ease;
+    height: 4000px;
+    margin: 0;
+    padding: 0;
+    
+    overflow-x: hidden;
+
+    
+}
+.bodyBlurred {
+    opacity: 0.3; /* Adjust this value as needed */
+}
+
+/* Parallax section */
+.firstSection {
+    height: 100vh;
+    background-image: url('Images/mainImageFree.jpg') ;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adding an overlay with ::before */
+.firstSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency as needed */
+    z-index: 1; /* Place the overlay below the text content */
+}
+
+/* Ensuring content appears above the overlay */
+.overlay {
+    position: relative;
+    z-index: 2; /* Layer content above the overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    left: 450px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+
+/* Title styling */
+h1, h4, h6 {
+    position: absolute;
+    
+    
+    
+    color: white;
+    position: relative;
+    z-index: 1; /* Ensure the title is above the overlay */
+    
+    
+    
+}
+h1{
+    font-size: 100px;
+    padding-bottom: 20px;
+}
+h4{
+    font-size: 50px;
+}
+h6{
+    font-size: 25px;
+    margin-bottom: 50px;
+}
+.action {
+    width: 200px;
+    padding: 15px;
+    border-radius: 50px;
+    background-color: rgba(244, 189, 14, 1);
+    border: none;
+    z-index: 1;
+    transition: 0.5s;
+}
+.action:hover{
+    background-color: rgba(244, 189, 14, 0.8);
+    transition: 0.5s;
+}
+
+
+.secondSection{
+    height: 4400px;
+    background-image: url('Images/earth.jpg') ;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.overlay_2{
+    position: relative;
+    z-index: 2; /* Layer content above the overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+    top: 150px;
+}
+
+.Part1_Description{
+    margin-top: 300px;
+    margin-bottom: 300px;
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+.animation{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+.Part2{
+    margin-top: 300px;
+    margin-bottom: 300px;
+}
+.Part2_Description{
+    margin-bottom: 300px;
+}
+.statistics{
+    display: flex;
+    flex-direction: column;
+}
+.obese,.air,.water{
+    margin-bottom: 50px;
+}
+.thirdSectionHeader{
+    font-size: 50px;
+    text-align: center;
+    margin-top: 100px;
+    color: black;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    
+}
+.factors{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    
+    text-align: center;
+    
+    margin-left: 30px;
+    margin-right: 30px;
+    
+}
+img{
+    width: 150px;
+    height: 150px;
+}
+h3{
+    margin-top: 20px;
+}
+p{
+    margin-left: 50px;
+    margin-right: 50px;
+    text-align: center;
+}
+.obesity,.pollution,.diseases{
+    text-align: center;
+    width: 33%
+}
+
+
+
+
+
+
+
+
+
+@import url('https://fonts.googleapis.com/css?family=Rubik&display=swap');
+
+
+
+ footer{
+    color:#caced1 !important;
+    margin-top: 100px;
+    background-color:#1E242A !important;
+    text-align: center;
+    padding: 50px;
+    
+ }
+ .navtitle{
+    font-size: 50px;
+    margin-bottom: 20px;
+    color: #4bd20c;
+ }
+ .text{
+    font-size: 30px;
+ }
+ a{
+    font-size: 20px;
+    margin-left: 20px;
+    margin-top: 30px;
+    color: #819cb7;
+ }
+
+
+
+
+

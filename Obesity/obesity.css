@@ -1,0 +1,283 @@
+/* Global Reset */
+*{
+    font-family: 'Roboto', sans-serif;
+}
+
+body {
+    
+    line-height: 1.6;
+    transition: opacity 0.5s ease;
+    height: 4000px;
+    margin: 0;
+    padding: 0;
+    
+    overflow-x: hidden;
+
+    
+}
+header{
+    position: fixed;
+    top: 10px;
+    left: 70px;
+    right: 70px;
+    background: #fffefe29;
+    color: black;
+    z-index: 200;
+    border-radius: 40px;
+}
+.home-link{
+    font-size: 25px;
+    font-weight: bold;
+    text-decoration: underline;
+    color: white;
+    background-color: #4bd20c;
+    padding: 20px;
+    border-radius: 20px;
+    width: 250px;
+    text-align: center;
+    margin: 20px;
+}
+.bodyBlurred {
+    opacity: 0.3; /* Adjust this value as needed */
+}
+
+/* Parallax section */
+.firstSection {
+    height: 100vh;
+    background-image: url('../Images/obesity.jpg') ;
+    background-attachment: fixed;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+/* Adding an overlay with ::before */
+.firstSection::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0, 0, 0, 0.5); /* Adjust transparency as needed */
+    z-index: 1; /* Place the overlay below the text content */
+}
+
+/* Ensuring content appears above the overlay */
+.overlay {
+    position: relative;
+    z-index: 2; /* Layer content above the overlay */
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding-left: 20px;
+    right: 450px;
+    align-items: center;
+    text-align: center;
+    justify-content: center;
+}
+body{
+    background-color: #ede8d0;
+}
+/* Title styling */
+h1, h4, h6 {
+    position: absolute;
+    
+    
+    
+    color: white;
+    position: relative;
+    z-index: 1; /* Ensure the title is above the overlay */
+    
+    
+    
+}
+h1{
+    font-size: 100px;
+    padding-bottom: 20px;
+}
+h4{
+    font-size: 50px;
+}
+img{
+    width: 50%;
+    height: 50%;
+    border-radius: 40px;
+}
+@keyframes appear {
+    from {
+        opacity: 0;
+        scale: 0.5;
+    }
+    to {
+        opacity: 1;
+        scale: 1;
+    }
+}
+.animation{
+    animation: appear linear;
+    animation-timeline: view();
+    animation-range: entry 0% cover 40%;
+}
+h2{
+    text-align: center;
+    color: #4cbb17;
+    font-weight: bold;
+    margin: 30px;
+    font-size: 50px;
+}
+.quote {
+    background-color: #4abb16;
+    text-align: center;
+    border-radius: 50px;
+    font-size: 25px;
+    margin: 80px auto;  /* Auto for horizontal centering */
+    width: 50vw;  /* Width of 50% of the viewport */
+    padding: 60px;
+}
+.reference{
+    text-align: center;
+    font-size: 60px;
+}
+i{
+    font-style: italic;
+    font-weight: bold;
+}
+.causesObesity,.activity,.genetics{
+    background-color: #ede8d0;
+    padding: 40px;
+    width: 80vw auto;
+    width: 100%;
+}
+.content{
+    display: flex;
+    flex-direction: row;
+    gap: 30px;
+    margin-left: 80px;
+    margin-right: 80px;
+    font-size: 30px;
+    justify-content: center;
+}
+
+
+.video-container {
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%; /* Full width of the page */
+}
+
+.video {
+    width: 50vw;
+    height: 50vh;
+}
+.charity{
+    margin-top: 60px;
+    text-align: center;
+    color: #4cbb17;
+    text-decoration: underline;
+}
+.offerSupport{
+    
+    background-color: #4cbb17;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 60px;
+    margin-bottom: 40px;
+    width: 600px;
+    border-radius: 50px;
+    margin: 0 auto;
+    height: 70vh;
+    padding: 30px;
+}
+.name{
+    color: black;
+}
+.description{
+    font-size: 30px;
+    text-align: center;
+}
+.action {
+    width: 200px;
+    padding: 15px;
+    border-radius: 50px;
+    background-color:  #4bd20c;
+    border: none;
+    z-index: 1;
+    transition: 0.5s;
+    border: 1px solid;
+}
+.action:hover{
+    background-color: #4cbb17;
+    transition: 0.5s;
+}
+.donation{
+    width: 50%;
+    height: 50%;
+}
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .home-link{
+        padding: 10px;
+        border-radius: 20px;
+        width: 150px;
+    }
+    .overlay{
+        right: 150px;
+    }
+    .quote{
+        width: 80vw;
+    }
+    .reference{
+        font-size: 40px;
+    }
+    .content img{
+        display: flex; /* Needed for justify-content */
+    justify-content: center;
+    align-items: center;
+    }
+    .content{
+        font-size: 12px;
+        flex-direction: column;
+        
+    }
+     h1 {
+        font-size: 60px;
+    }
+
+    .overlay h4 {
+        font-size: 35px;
+    }
+
+    .overlay h6 {
+        font-size: 18px;
+    }
+
+    .quote {
+        font-size: 16px;
+    }
+
+    .causesObesity, .Help {
+        padding: 40px 20px;
+    }
+
+    iframe {
+        width: 100%;
+        height: auto;
+    }
+    .offerSupport{
+        width: 400px;
+        height: 600px;
+    }
+    .description{
+        font-size: 20px;
+    }
+}
