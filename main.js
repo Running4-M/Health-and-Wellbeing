@@ -9,5 +9,5 @@ pollution.addEventListener("click", ()=> {
     window.location.href = "../Pollution/pollution.html";
 });
 diseases.addEventListener("click", ()=> {
-    window.location.href = "/Health-and-Wellbeing/Obesity/obesity.html";
+    window.location.href = "../Health-and-Wellbeing/Obesity/obesity.html";
 });
